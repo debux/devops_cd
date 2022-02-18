@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: dev
-      url: 'www.google.com'
+      url: 'http://www.google.com'
     needs: build
     steps:
 #      - uses: actions/checkout@v2
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: hmg
-      url: 'www.google.com'
+      url: 'http://www.google.com'
     needs: deploy-dev
     steps:
 #      - uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: prd
-      url: 'www.google.com'
+      url: 'http://www.google.com'
     needs: deploy-hmg
     steps:
 #      - uses: actions/checkout@v2
