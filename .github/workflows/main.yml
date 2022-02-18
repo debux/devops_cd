@@ -4,14 +4,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
 #      - uses: actions/checkout@v2
       - name: Run a one-line script
         run: echo Hello, world!
 
   deploy-dev:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment:
       name: dev
       url: 'http://www.google.com'
@@ -22,7 +22,7 @@ jobs:
         run: echo Deploy Dev
         
   deploy-hmg:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment:
       name: hmg
       url: 'http://www.google.com'
@@ -33,7 +33,7 @@ jobs:
         run: echo Deploy HMG
   
   deploy-prd:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment:
       name: prd
       url: 'http://www.google.com'
