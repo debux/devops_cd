@@ -1,19 +1,12 @@
-// Importing http core package/module provided by nodejs
 
-var http = require('http');
+const express = require('express')
+const app = express()
+const port = 3000
 
-// Creating a server
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
-http.createServer(function (req, res) {
-
-// Write response as Html(text)
-
-res.writeHead(200, {'Content-Type': 'text/html'});
-
-// Writing static text
-
-res.end('Hello World');
-
-// Server listening on port number 4200
-
-}).listen(4200);
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
