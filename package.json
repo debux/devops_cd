@@ -1,6 +1,3 @@
 {
-  "name" : "foo",
-  "dependencies" : {
-    "bar" : "0.1.x"
-  }
+  "name": "test-project"
 }
